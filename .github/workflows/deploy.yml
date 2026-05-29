@@ -118,6 +118,8 @@ jobs:
           cd apps/web/.next
           rm -rf cache
           cp -r ../public ./standalone/public
+          mkdir -p ./standalone/apps/web/public
+          cp -r ../public/. ./standalone/apps/web/public/
           mv ./static ./standalone/apps/web/.next/static
           cd ./standalone
           echo ';process.title = "Yohaku (NextJS)"' >> server.js
